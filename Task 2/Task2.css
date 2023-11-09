@@ -1,0 +1,249 @@
+* {
+    font-family: "Titillium Web", sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+footer {
+    padding: 100px;
+    font-size: 15.5px;
+    text-align: center;
+}
+
+
+header {
+    display: flex;
+    background: #1E90FF;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+input {
+    outline: none;
+    position: static;
+
+    height: 30px;
+    width: 300px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    gap: 10px;
+}
+
+/* giving a frame for the movies that will be inserted with proper size and position */
+.movieContainer {
+    display: flex;
+    gap: 10px;
+    border: 1px hidden;
+    margin: 5px;
+    margin: 0 auto;
+}
+
+/* allowing the buttons to have colors, proper size and position */
+.infoButton {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: rgb(27, 152, 255);
+    border: none;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.movies2 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.images2 {
+    max-width: 100%;
+}
+
+.image1 {
+    max-width: 650%;
+    margin: -15px;
+}
+
+.boxes_m {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 4px rgba(46, 49, 49, 0.4),
+        -3px -3px 4px rgba(46, 49, 49, 0.1);
+    padding: 1em;
+}
+
+.infoButton {
+    align-self: flex-end;
+}
+
+/* giving the website maximum size of 2560px */
+@media screen and (max-width: 2560px) {
+
+/* divs would also changes into their appropriate sizes along with the website*/
+    .navb {
+        display: none;
+    }
+
+
+    .movieContainer {
+        max-width: 1200px;
+    }
+
+    .movie1 {
+        flex-basis: 60%;
+    }
+
+    .movies2 {
+        flex-basis: 40%;
+    }
+
+    .Avng {
+        flex: 1 1 60%;
+        margin-bottom: 500px;
+        max-width: 100%;
+
+    }
+
+    .mixM {
+        flex: 1 1 30%;
+        width: 10%;
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+
+
+    .navb {
+        display: none;
+    }
+
+
+    .movieContainer {
+        max-width: 1000px;
+    }
+
+    .Avng {
+        flex: 1 1 60%;
+        margin-bottom: 100%;
+        max-width: 100%;
+
+    }
+
+    .mixM {
+        flex: 1 1 30%;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .navb {
+        display: none;
+    }
+
+
+    .movieContainer {
+        max-width: 1000px;
+    }
+
+    .movie1 {
+        flex-basis: 90%;
+    }
+
+    .Avng {
+        flex: 1 1 60%;
+        margin-bottom: 250%;
+        max-width: 100%;
+    }
+
+    .mixM {
+        flex: 1 1 40%;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+
+    input {
+        display: none;
+    }
+
+    .box a {
+        display: none;
+    }
+
+    .box a.icon {
+        display: block;
+        width: 50px;
+        height: 10%;
+        align-items: center;
+    }
+
+    .navb {
+        position: relative;
+        display: inline-block;
+    }
+
+    .navopt {
+        display: none;
+        position: absolute;
+        background-color: #50a6fc;
+        border-radius: 8px;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(142, 207, 233, 0.678);
+        padding: 15px 20px;
+        z-index: 100;
+        text-align: left;
+        transform: translateX(-80%);
+    }
+
+    .navb:hover .navopt {
+        display: block;
+        left: 0px;
+    }
+
+    .movieContainer {
+        flex-direction: column;
+    }
+
+    .Avng {
+        margin: 0px;
+    }
+}
+
+/* the smallest screen size for devices such as cellphones at 480px layout */
+@media screen and (max-width: 480px) {
+
+
+    .mixM {
+        flex: 1 1 100%;
+        width: 20%;
+    }
+}
