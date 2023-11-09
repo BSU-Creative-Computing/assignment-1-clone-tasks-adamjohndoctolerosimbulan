@@ -1,0 +1,109 @@
+/* this is the code for managing padding, margin, fonts, fontsize, and and height */
+p.text { 
+
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* this code is needed in order to give width, height and background color for the body*/
+body{ 
+
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* this part of the code acts as a frame for the images that are inserted */
+.box{ 
+
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* this code is for the bottom part of the website and acts as the footer by giving the proper height and padding */
+footer { 
+
+    padding: 15px;
+    background-color: #292727;
+    text-align: center;
+    font-size: 10px;
+    color: #ffffff;
+    height: 11px;
+}
+
+/* this code is for helping the images to be in their correct positions by giving them flaot, height, width, and type of display which is "table-column" */
+img {
+
+    float: left;
+    height: 250px;
+    width: 300px;
+    display: table-column;
+    margin-bottom: 100;
+}
+
+.Task1Logo{ /* this is for the task1logo div and the postioning for the image that will be inserted for the logo. Table row is used so that the logo's position is above the images */
+
+    width: 100px;
+    display: table-row;
+}
+
+.Task1Logo img{ /* This is for giving the images proper size and position */
+    
+    float: left;
+    padding: 10px;
+    margin-left: 0px;
+    width: 60px;
+    height: 50px;
+}
+
+/* the @media helps to enable resizing the website when a user uses different devices with different screen sizes. The 
+website shows a another layout of the website when the screen reaches 1024px */
+@media screen and (max-width:1024px) {
+   
+    .box{
+        width: 90%;
+        height: auto;
+    }
+    img{
+       
+       width: 33%;
+       height: 100%;
+    }
+
+}
+
+/* this is another size of layout when the screen reaches 800px */
+@media screen and (max-width:800px) {
+   
+    .box{
+
+        width: 90%;
+        height: auto;
+    }
+    img {
+
+        width: 50%;
+        height: 100%;
+    }
+}
+
+/* this is another size of layout when the screen reaches 480px */
+@media screen and (max-width:480px) {
+    
+    .box {
+
+        width: 90%;
+        height: auto;
+    }
+    img {
+
+        width: 100%;
+        height: 100%;
+    }
+}
