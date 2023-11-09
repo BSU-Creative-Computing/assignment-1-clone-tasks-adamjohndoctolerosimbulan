@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e2eff1;
+}
+
+header {
+  background-color: #8ccff7;
+  background-position: center center;
+  background-image: url("https://via.placeholder.com/400");
+  background-repeat: no-repeat;
+  height: 400px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  header {
+    background-image: url("https://via.placeholder.com/200");
+    height: 200px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  header {
+    background-image: url("https://via.placeholder.com/300");
+    height: 300px;
+  }
+}
+
+.frame {
+  margin: 50px 0;
+}
+
+.lines .var {
+  height: 40px;
+  width: 100%;
+  display: block;
+}
+
+.circles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circles .var {
+  margin: 5px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 620px) {
+  .circles {
+    flex-direction: column;
+  }
+}
+.var-1, .var-2, .var-3, .var-4 {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.var-1:hover, .var-2:hover, .var-3:hover, .var-4:hover {
+  background-color: #444;
+  color: black;
+}
+
+.var-1 {
+  height: 70px;
+  width: 70px;
+  background-color: #4e89ae;
+}
+
+.var-2 {
+  height: 80px;
+  width: 80px;
+  background-color: #43658b;
+}
+
+.var-3 {
+  height: 90px;
+  width: 90px;
+  background-color: #ed6663;
+}
+
+.var-4 {
+  height: 100px;
+  width: 100px;
+  background-color: #ffa372;
+}
+
+footer {
+  height: 50px;
+  background-color: #8ccff7;
+}/*# sourceMappingURL=Task3.css.map */

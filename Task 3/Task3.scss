@@ -1,0 +1,117 @@
+$item-list: '1','2','3','4';
+$height-H: 400px, 300px, 200px;
+$circle-H: 70px, 80px, 90px, 100px;
+$circle-W: 70px, 80px, 90px, 100px;
+$colors: #4e89ae, #43658b, #ed6663, #ffa372, #8ccff7;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin breakpoint($minwidth, $maxwidth) {
+
+    @media screen and (min-width:$minwidth) and (max-width:$maxwidth) {
+
+        @content;
+    }
+}
+
+@mixin header {
+
+    background-color: nth($colors, 5);
+    background-image: url("https://via.placeholder.com/400");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: nth($height-H, 1);
+
+    @include breakpoint(481px, 800px) {
+
+        background-image: url("https://via.placeholder.com/300");
+        height: nth($height-H, 2)
+    }
+
+    @include breakpoint(0px, 480px) {
+
+        background-image: url("https://via.placeholder.com/200");
+        height: nth($height-H, 3)
+    }
+
+}
+
+body {
+
+    background-color: #e2eff1;
+}
+
+@mixin circles {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    @include header();
+}
+
+.frame {
+
+    margin: 50px 0;
+}
+
+.lines .var {
+
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+
+.circles{
+
+    @include circles();
+}
+
+.circles .var {
+
+    border-radius: 50%;
+    margin: 5px;
+}
+
+@include breakpoint(0px, 620px) {
+
+    .circles {
+        flex-direction: column;
+    }
+
+}
+
+.var-1, .var-2, .var-3, .var-4{
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+.var-1:hover, .var-2:hover, .var-3:hover, .var-4:hover {
+
+    background-color: #444;
+    color: black;
+}
+
+@each $name in $item-list {
+
+    $i: index($item-list, $name);
+
+    .var-#{$name} {
+
+        height: nth($circle-H,$i);
+        width: nth($circle-W,$i);
+        background-color: nth($colors,$i);
+    }
+}
+
+footer {
+
+    background-color: nth($colors, 5);
+    height: 50px;
+}
